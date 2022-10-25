@@ -18,7 +18,7 @@ class IncrementUtils {
 
         @JvmStatic
         fun inject(project: Project, lintRequest: LintRequest) {
-            //当前执行的不是增量扫描
+            //当前执行的不是增量扫描，project.gradle.startParameter.taskNames是gradle命令行参数，如gradle clean app:deploy，那么命令行参数就是['clean', 'app:deploy']
             if (project.gradle.startParameter.taskNames.find { it.contains("lintIncrement") } == null) {
                 return
             }

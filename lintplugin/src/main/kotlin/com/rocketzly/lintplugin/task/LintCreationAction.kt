@@ -3,8 +3,8 @@ package com.rocketzly.lintplugin.task
 import com.android.build.gradle.internal.scope.VariantScope
 import com.android.tools.lint.gradle.api.ReflectiveLintRunner
 import com.rocketzly.lintplugin.dependency.DependencyHelper
+import jdk.internal.loader.URLClassPath
 import org.gradle.api.Project
-import sun.misc.URLClassPath
 import java.net.URL
 import kotlin.concurrent.thread
 

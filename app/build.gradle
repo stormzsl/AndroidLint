@@ -24,6 +24,14 @@ android {
         }
     }
 
+    lintConfig {
+        /*
+         * 添加了baseline这个配置后，在第一次执行lint命令时会在目录创建一个lint-baseline.xml文件用来记录已经存在的错误，
+         * 在下次执行lint检查的时候则会忽略掉lint-baseline.xml中的错误以达到忽略历史问题的目的。效果如下
+         */
+        baseline = true//生成baseline文件，默认为false不会生成,baseline地址：${modulePath}/lint-baseline.xml
+    }
+
 }
 
 dependencies {
