@@ -32,6 +32,14 @@ android {
 //        baseline = true//生成baseline文件，默认为false不会生成,baseline地址：${modulePath}/lint-baseline.xml
 //    }
 
+//    You can try disabling it with something like this:
+//        android {
+//                lintOptions {
+//                        disable "DependencyDetector"
+//                    }
+//            }
+
+
 }
 
 dependencies {

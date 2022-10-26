@@ -56,11 +56,10 @@ public class LogDetector extends Detector implements SourceCodeScanner {
     public void visitMethodCall(@NotNull JavaContext context, @NotNull UCallExpression node, @NotNull PsiMethod method) {
         boolean isMemberInClass = context.getEvaluator().isMemberInClass(method,LOG_CLASS_FULL_NAME);
         boolean isMemberInSubClass = context.getEvaluator().isMemberInSubClassOf(method,LOG_CLASS_FULL_NAME,true);
-        System.out.println(">>>>>>>");//可以通过gradlew lint 看到打印信息
-        System.out.println(TAG +"::" +method.getName());
-        System.out.println("<<<<<<<");
+//        System.out.println(">>>>>>>");//可以通过gradlew lint 看到打印信息
+//        System.out.println(TAG +"::" +method.getName());
+//        System.out.println("<<<<<<<");
         if(isMemberInClass || isMemberInSubClass){
-            System.out.println("******");
             context.report(ISSUE,context.getLocation(node),MESSAGE);//report 上报提示信息给开发者
         }
     }
