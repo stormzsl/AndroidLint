@@ -23,5 +23,6 @@ android {
 }
 
 dependencies {
-    lintPublish project(':checks')
+    lintPublish project(':lintrule')
 }
+
