@@ -2,6 +2,7 @@ package com.ecarx.rule
 
 import com.android.tools.lint.client.api.IssueRegistry
 import com.android.tools.lint.detector.api.Issue
+import com.ecarx.rule.detector.GlideWithDetector
 import com.ecarx.rule.detector.LogDetector
 
 /**
@@ -18,9 +19,10 @@ class CustomIssueRegistry : IssueRegistry() {
 //            AvoidUsageApiDetector.ISSUE,
 //            DependencyApiDetector.ISSUE,
 //            ResourceNameDetector.ISSUE,
-            LogDetector.ISSUE
+            LogDetector.ISSUE,
+            GlideWithDetector.ISSUE
         )
 
     override val api: Int
-        get() = 5
+        get() = 2
 }
