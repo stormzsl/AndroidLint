@@ -6,3 +6,4 @@ package com.rocketzly.checks
  * Time: 10:15 AM
  */
 const val CLASS_SERIALIZABLE = "java.io.Serializable"
+const val LOG_CLASS_FULL_NAME = "android.util.Log"
